@@ -10,12 +10,12 @@ int main()
         s=s*10+r;
         q=q/10;
     }
-    if(n==s)
+    if(s==n)
     {
-        printf("Palindrome");
+        printf("True");
     }
     else
     {
-        printf("Not Palindrome");
+        printf("False");
     }
 }
