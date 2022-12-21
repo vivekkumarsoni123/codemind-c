@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,r;
+    int n,s=0,i,r;
     scanf("%d",&n);
     while(n>9)
     {
@@ -9,5 +9,5 @@ int main()
         n=n/10;
         n=n+r;
     }
- printf("%d",n);   
+    printf("%d",n);
 }
