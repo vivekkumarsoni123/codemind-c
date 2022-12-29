@@ -1,21 +1,20 @@
 #include<stdio.h>
-int main(){
-    int n,r,s=0,a,b,q,w=0;
+int main()
+{
+    int n,q,r=0,t=0,s;
     scanf("%d",&n);
-    a=n*n;
+    q=n*n;
     while(n!=0)
     {
-        r=n%10;
-        s=s*10+r;
-        n=n/10;
+        r=r*10+n%10;
+        n/=10;
     }
-    b=s*s;
-    while(b!=0)
+    s=r*r;
+    while(s!=0)
     {
-        q=b%10;
-        w=w*10+q;
-        b=b/10;
+        t=t*10+s%10;
+        s/=10;
     }
-    if(w==a)printf("True");
+    if(q==t)printf("True");
     else printf("False");
 }
