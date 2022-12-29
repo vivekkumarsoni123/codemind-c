@@ -1,46 +1,49 @@
+// Online C compiler to run C program onli
 #include<stdio.h>
 int prime(int n)
 {
-    int i,c=0;
-    for(i=1;i<=n;i++)
+    int d=0,i;
+    for(i=2;i<=n;i++)
     {
         if(n%i==0)
-        c++;
+        {
+            d++;
+        }
+        
     }
-    if(c==2)return 1;
-    else return 0;
+    if(d==1)return 1;
+        else return 0;
 }
 int main()
 {
-    int k,j;
-    scanf("%d",&k);
-    for(j=1;j<=k;j++)
-    {
-    int n,d1=0,d2=0,np1=0,np2=0,i;
+    int k,i,n,d1=0,d2=0,np1=0,np2=0,t;
     scanf("%d",&n);
-    for(i=n;;i++)
+    for(i=1;i<=n;i++)
     {
-        if(prime(i))
+        scanf("%d",&t);
+        for(k=t;;k++)
         {
-            d1=i-n;
-            np1=i;
-            break;
+            if(prime(k))
+            {
+                d1=k-t;
+                np1=k;
+                break;
+            }
         }
-    }
-    for(i=n-1;;i--)
-    {
-        if(prime(i))
+        for(k=t-1;;k--)
         {
-            d2=n-i;
-            np2=i;
-            break;
+            if(prime(k))
+            {
+                d2=t-k;
+                np2=k;
+                break;
+            }
         }
-    }
-    if(d1<d2)printf("%d
+        if(d1<d2)printf("%d
 ",np1);
-    else if(d2<d1)printf("%d
+        else if(d2<d1)printf("%d
 ",np2);
-    else printf("%d
+        else printf("%d
 ",np2);
     }
 }
