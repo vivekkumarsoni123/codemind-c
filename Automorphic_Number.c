@@ -1,17 +1,15 @@
 #include<stdio.h>
 int main(){
-    int n,sq;
+    int n;
     scanf("%d",&n);
-    sq=n*n;
-    while(n>0)
-    {
-        if((n%10)==(sq%10))
-        {
-            n=n/10;
-            sq=sq/10;
+    int s=n*n;
+    while(n){
+        if(n%10 != s%10){
+            printf("Not an Automorphic Number");
+            break;
         }
-        else break;
+        n=n/10;
+        s=s/10;
     }
-        if(n==0)printf("Automorphic Number");
-        else printf("Not an Automorphic Number");
+    if(n==0) printf("Automorphic Number");
 }
